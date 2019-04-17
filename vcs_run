@@ -1,0 +1,18 @@
+#!/bin/bash
+
+function vcs_run {
+    vcs \
+        -licwait 1 \
+        -debug_all \
+        -sverilog \
+        -timescale=1ps/1ps \
+        -CFLAGS -DVCS \
+        +incdir+$UVM_HOME/src \
+        $UVM_HOME/src/uvm_pkg.sv \
+        $UVM_HOME/src/dpi/uvm_dpi.cc \
+        $* \
+    && ./simv -gui -licwait 1
+}
+
+vcs_run simple_uvm_example.sv
+
