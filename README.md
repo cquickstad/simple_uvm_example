@@ -10,3 +10,4 @@ Includes:
 * an environment object to instantiate and connect the test-bench components
 * a uvm_test to instantiate the environment and run the sequences
 * a top module to instantiate the DUT (device under test) and the interface
+* a test selected from the command line with +UVM_TESTNAME

@@ -11,7 +11,7 @@ function vcs_run {
         $UVM_HOME/src/uvm_pkg.sv \
         $UVM_HOME/src/dpi/uvm_dpi.cc \
         $* \
-    && ./simv -gui -licwait 1
+    && ./simv -gui -licwait 1 +UVM_TESTNAME=my_test
 }
 
 vcs_run simple_uvm_example.sv

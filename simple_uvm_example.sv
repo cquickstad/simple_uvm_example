@@ -290,5 +290,5 @@ module top;
   my_dut dut(.*);
   my_interface ifc(.*);
   initial uvm_config_db#(virtual my_interface)::set(null, "", "ifc", ifc);
-  initial run_test("my_test");
+  initial run_test(); // The test is selected from the command line with +UVM_TESTNAME=my_test
 endmodule
