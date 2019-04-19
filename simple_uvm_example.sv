@@ -275,7 +275,6 @@ class my_test extends uvm_test;
   virtual task do_sequences(int n);
     repeat (n) begin
       seq = my_value_sequence::type_id::create("seq");
-      seq.start(env.sequencer);
       assert (seq.randomize())
       else `uvm_fatal("SEQ_RAND", "Failed to randomize my_sequence")
       seq.start(env.sequencer);
